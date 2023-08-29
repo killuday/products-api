@@ -15,7 +15,7 @@ const client = new MongoClient(url, {
   useUnifiedTopology: true,
 });
 
-app.get("/getallproducts", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     await client.connect();
     console.log("Connected to MongoDB");
@@ -41,7 +41,7 @@ app.get("/getallproducts", async (req, res) => {
   }
 });
 
-app.get("/", async (req, res) => {
+app.get("/getallproducts", async (req, res) => {
  res.send("Hello World!");
 });
 
